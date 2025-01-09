@@ -1,0 +1,283 @@
+:root{
+    --cor-primaria: black;
+    --cor-secundaria: darkturquoise;
+    --cor-terciaria: darkviolet;
+    --cor-quartaria: yellow;
+    --cor-quintaria: white;
+
+    --fonte-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+   
+body{
+    background-color: var(--cor-quintaria);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url("../principal/assets/fundoprograma.js.png");
+
+}
+
+.texto{
+    background-color: var(--cor-quintaria);
+    color: var(--cor-secundaria);
+}
+
+
+.titulo_principal{
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    border: 3px solid var(--cor-terciaria);
+    color: var(--cor-secundaria)
+}
+
+.texto_introducao{
+    font-family: var(--fonte-secundaria);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    border: 3px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    text-shadow: 1px 1px var(--cor-terciaria);
+}
+
+.frase_instrucao{
+    font-family: var(--fonte-secundaria);
+    font-size: 25px;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    text-align: center;
+    text-shadow: 1px 1px var(--cor-quartaria);
+}
+
+.frase_instrucao_02{
+    font-family: var(--fonte-secundaria);
+    font-size: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    text-shadow: 1px 1px var(--cor-terciaria);
+}
+
+.container_imagens{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+
+}
+
+.imagem_instagram{
+    max-width : 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    left: 12%;
+}
+    
+.imagem_whatsaap{
+    max-width : 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    left: 35%;
+}
+
+.imagem_github{
+    max-width : 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    left: 60%;
+}
+
+.imagem_linkedin{
+    max-width : 250px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    left: 87%;
+}
+
+.botao_de_contato {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.botao_de_contato:hover {
+    transform: scale(1.2);
+}
+
+.imagem_programmer{
+    position: absolute;
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    top: 60%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    font-size: 5px;
+}
+
+.botao_programacao_dois{
+    position: absolute;
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    top: 55%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    font-size: 5px;
+}
+
+.botao_programacao_tres{
+    position: absolute;
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+    top: 55%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+    font-size: 5px;
+}
+
+.botao_voltar{
+  max-width: 100%;
+    width: 70px;
+    top: 10px;
+}
+
+.introducao_programa{
+    font-family: var(--fonte-secundaria);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    border: 3px solid var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    text-shadow: 1px 1px var(--cor-terciaria);
+    top: 50px;
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .container{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .entrada_do_usuario{
+        width: 50%;
+    }
+
+    .entrada_do_usuario::placeholder{
+        background-position: 7em;
+    }
+
+    .container_imagem_programacao{
+        display: none;
+    }
+
+    .botao_salvar{
+        width: 8%;
+    }
+
+    .botao_salvar::placeholder{
+        background-position: 10em;
+    }
+    
+    .botao_reiniciar{
+        width: 8%;
+    }
+
+    .botao_reiniciar::placeholder{
+        background-position: 10em;
+    }
+
+    .botao_mostrar_lista{
+        width: 8%;
+    }
+
+    .botao_mostrar_lista::placeholder{
+        background-position: 10em;
+    }
+}
+
+
+@media screen and (max-width: 1728px){
+    .container{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .imagem_insatgram{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .imagem_whatsaap{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .imagem_github{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .imagem_linkedin{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+
+    .entrada_do_usuario{
+        width: 35%;
+    }
+
+    .entrada_do_usuario::placeholder{
+        background-position: 12em;
+    }
+
+    .container_imagem_programacao{
+        display: none;
+    }
+
+    .botao_salvar{
+        width: 10%;
+    }
+
+    .botao_salvar::placeholder{
+        background-position: 10em;
+    }
+
+    .botao_reiniciar{
+        width: 10%;
+    }
+
+    .botao_reiniciar::placeholder{
+        background-position: 10em;
+    }
+
+    .botao_mostrar_lista{
+        width: 10%;
+    }
+
+    .botao_mostrar_lista::placeholder{
+        background-position: 10em;
+    }
+    
+}

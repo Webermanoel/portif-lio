@@ -1,0 +1,7 @@
+@media (max-width: 1200px){
+    .icones_contato{
+        flex-direction: column-reverse;
+        padding: 5%;
+        width: auto;
+    }
+}

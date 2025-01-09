@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bancocomjavascript</title>
+    <link rel="stylesheet" href="../principal/wmprogrammer.css">
+    <link rel="stylesheet" href="../banco/banco.css">
+</head>
+<body class="body_banco">
+    <H1 class="titulo_principal_banco" >Bem-vindo ao seu banco</H1>
+    <div class="container_imagens">
+        <a class="link_botao_voltar" href="../principal/wmprogrammer.html" >
+            <img class="botao_de_contato" src="../principal/assets/icone_programação2.png" alt="botao voltar">
+        </a>
+    </div>
+    <input type="text" min="1" max="10" class="entrada_do_deposito">
+    <div class="lista_botoes">
+        <button onclick="depositar()" class="botao_depositar">Depositar</button>
+    </div>
+    <input type="text" min="1" max="10" class="entrada_do_saque">
+    <div class="lista_botoes">
+        <button onclick="sacar()" class="botao_sacar">Sacar</button>
+    </div>
+    <input type="text" min="1" max="10" class="entrada_da_transferencia">
+    <div class="lista_botoes">
+        <button onclick="fazerTransferencia()" class="botao_fazer_transferencia">Transferência</button>
+    </div>
+
+    <script src="../banco/banco.js" defer></script>
+</body>
+</html>

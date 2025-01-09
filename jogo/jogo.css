@@ -1,0 +1,44 @@
+:root{
+    --cor-primaria: black;
+    --cor-secundaria: darkturquoise;
+    --cor-terciaria: darkviolet;
+    --cor-quartaria: yellow;
+    --cor-quintaria: white;
+
+    --fonte-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.body_jogo {
+    background-image: url("../jogo/assets/fundo-jogo.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.titulo_principal {
+    text-align: center;
+    font-size: 2.5em;
+    border: 3px solid var(--cor-terciaria);
+    background-color: var(--cor-primaria);
+    margin: 20px 0;
+}
+
+.container_imagens {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao_de_contato {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.botao_de_contato:hover {
+    transform: scale(1.2);
+}
