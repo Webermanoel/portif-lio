@@ -8,6 +8,7 @@
     --cor-terciaria: white;
     --cor-quartaria: yellow;
     --cor-hover: darkviolet;
+    --cor-quintária: gray;
     --fonte-primaria: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Poppins', sans-serif;
 }
@@ -18,8 +19,9 @@
 }
 
 body{
+    background-image: url(assets/fundo\ portifólio.png);
     box-sizing: border-box;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-quintária);
     color: var(--cor-terciaria);
 }
 
@@ -53,12 +55,16 @@ body{
 .apresentacao__conteudo__titulo{
     font-size: 2.25;
     font-family: var(--fonte-primaria);
+    border: 3px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-secundaria)
 }
 
 .apresentacao__conteudo__texto{
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
+    border: 3px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
 
@@ -74,6 +80,8 @@ body{
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
+    border: 3px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
 }
     
 
@@ -91,6 +99,8 @@ body{
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
+    border: 3px solid var(--cor-quintária);
+    background-color: var(--cor-quintária);
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria)
 }
