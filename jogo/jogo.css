@@ -1,4 +1,4 @@
-:root{
+:root {
     --cor-primaria: black;
     --cor-secundaria: darkturquoise;
     --cor-terciaria: darkviolet;
@@ -25,6 +25,9 @@
     border: 3px solid var(--cor-terciaria);
     background-color: var(--cor-primaria);
     margin: 20px 0;
+    padding: 1em;
+    color: var(--cor-quintaria);
+    border-radius: 8px;
 }
 
 .container_imagens {
@@ -37,8 +40,34 @@
     height: 80px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    border-radius: 50%;
 }
 
 .botao_de_contato:hover {
     transform: scale(1.2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .titulo_principal {
+        font-size: 2rem;
+        padding: 0.8em;
+    }
+
+    .botao_de_contato {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo_principal {
+        font-size: 1.5rem;
+        padding: 0.6em;
+    }
+
+    .botao_de_contato {
+        width: 60px;
+        height: 60px;
+    }
 }
