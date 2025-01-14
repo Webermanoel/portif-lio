@@ -3,176 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo ao Jogo de Corrida</title>
-    <meta name="description" content="Jogue agora e divirta-se com nosso jogo interativo feito em JavaScript!">
+    <title>Jogo de Corrida - WMProgrammer</title>
+    <meta name="description" content="Jogue agora e divirta-se com nosso jogo interativo de corrida feito em JavaScript!">
     <link rel="stylesheet" href="../principal/wmprogrammer.css">
     <link rel="stylesheet" href="../jogo/jogo.css">
 </head>
 <body class="body_jogo">
-    <h1 class="titulo_principal">Bem-vindo ao jogo</h1>
+    <header class="header">
+        <h1 class="titulo_principal">Bem-vindo ao Jogo de Corrida</h1>
+    </header>
 
-    <div class="container_imagens">
-        <a class="link_botao_voltar" href="../principal/wmprogrammer.html">
-            <img class="botao_de_contato" src="../principal/assets/icone_programação3.png" alt="Botão para voltar à página inicial">
-        </a>
-    </div>
-    <canvas id="myCanvas" width="800" height="400"></canvas>
-    <script>
+    <main class="conteudo">
+        <div class="container-voltar">
+            <a class="link-voltar" href="../principal/wmprogrammer.html" aria-label="Voltar à página inicial">
+                <img class="botao-voltar" src="../principal/assets/icone_programação3.png" alt="Botão para voltar">
+            </a>
+        </div>
+        <canvas id="myCanvas" tabindex="0" width="800" height="400"></canvas>
+    </main>
 
-         // Música de fundo
-    const musicaFundo = new Audio("../jogo/assets/musica-de-fundo.mp3"); // Caminho para o arquivo de áudio
-    musicaFundo.loop = true; // Reproduzir em loop
-    musicaFundo.volume = 1.0; // Ajuste o volume (0.0 a 1.0)
-    musicaFundo.play(); // Inicia a música ao carregar o jogo
+    <footer class="footer">
+        <p>Pressione <strong>'M'</strong> para ligar/desligar a música de fundo.</p>
+    </footer>
 
-    // Configuração para permitir controle da música (opcional)
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "m") {
-            if (musicaFundo.paused) {
-                musicaFundo.play(); // Reproduz a música
-            } else {
-                musicaFundo.pause(); // Pausa a música
-            }
-        }
-    });
-
-    // Exibe uma mensagem sobre o controle da música (opcional)
-    function exibeControlesAudio() {
-        ctx.fillStyle = "black";
-        ctx.font = "16px Arial";
-        ctx.fillText("Pressione 'M' para ligar/desligar a música", 500, 20);
-    }
-
-    // Atualize a função de exibição de pontos
-    function exibePontos() {
-        ctx.fillStyle = "black";
-        ctx.font = "20px Arial";
-        ctx.fillText(`Pontos: ${meusPontos}`, 50, 20);
-        exibeControlesAudio(); // Exibe a mensagem de controle da música
-    }
-
-        const canvas = document.getElementById("myCanvas");
-        const ctx = canvas.getContext("2d");
-
-        // Carregando as imagens
-        const imgEstrada = new Image();
-        imgEstrada.src = "../jogo/assets/estrada.png";
-
-        const imgAtor = new Image();
-        imgAtor.src = "../jogo/assets/ator-1.png";
-
-        const imgCarro1 = new Image();
-        imgCarro1.src = "../jogo/assets/carro-1.png";
-
-        const imgCarro2 = new Image();
-        imgCarro2.src = "../jogo/assets/carro-2.png";
-
-        const imgCarro3 = new Image();
-        imgCarro3.src = "../jogo/assets/carro-3.png";
-
-        // Variáveis do Ator
-        let xAtor = 85;
-        let yAtor = 366;
-        let larguraAtor = 40;
-        let alturaAtor = 40;
-        let meusPontos = 0;
-
-        // Variáveis dos carros
-        let xCarros = [700, 600, 500];
-        let yCarros = [40, 120, 200];
-        let velocidadeCarros = [3, 4, 5];
-        let larguraCarro = 60;
-        let alturaCarro = 40;
-        const imagensCarros = [imgCarro1, imgCarro2, imgCarro3];
-
-        // Função para desenhar a estrada
-        function desenhaEstrada() {
-            ctx.drawImage(imgEstrada, 0, 0, canvas.width, canvas.height);
-        }
-
-        // Função para desenhar o ator
-        function desenhaAtor() {
-            ctx.drawImage(imgAtor, xAtor, yAtor, larguraAtor, alturaAtor);
-        }
-
-        // Função para desenhar os carros
-        function desenhaCarros() {
-            for (let i = 0; i < xCarros.length; i++) {
-                ctx.drawImage(imagensCarros[i], xCarros[i], yCarros[i], larguraCarro, alturaCarro);
-            }
-        }
-
-        // Função para movimentar o ator
-        function movimentaAtor() {
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "ArrowUp" && yAtor > 0) yAtor -= 5;
-                if (event.key === "ArrowDown" && yAtor < canvas.height - alturaAtor) yAtor += 5;
-                if (event.key === "ArrowLeft" && xAtor > 0) xAtor -= 5;
-                if (event.key === "ArrowRight" && xAtor < canvas.width - larguraAtor) xAtor += 5;
-            });
-        }
-
-        // Função para movimentar os carros
-        function movimentaCarros() {
-            for (let i = 0; i < xCarros.length; i++) {
-                xCarros[i] -= velocidadeCarros[i];
-                if (xCarros[i] < -larguraCarro) {
-                    xCarros[i] = canvas.width;
-                }
-            }
-        }
-
-        // Função para verificar colisão
-        function verificaColisao() {
-            for (let i = 0; i < xCarros.length; i++) {
-                if (
-                    xAtor < xCarros[i] + larguraCarro &&
-                    xAtor + larguraAtor > xCarros[i] &&
-                    yAtor < yCarros[i] + alturaCarro &&
-                    yAtor + alturaAtor > yCarros[i]
-                ) {
-                    voltaAtorParaPosicaoInicial();
-                    if (meusPontos > 0) meusPontos -= 1;
-                }
-            }
-        }
-
-        // Função para reposicionar o ator
-        function voltaAtorParaPosicaoInicial() {
-            yAtor = 366;
-        }
-
-        // Função para marcar ponto
-        function marcaPonto() {
-            if (yAtor < 15) {
-                meusPontos += 1;
-                voltaAtorParaPosicaoInicial();
-            }
-        }
-
-        // Função para exibir os pontos
-        function exibePontos() {
-            ctx.fillStyle = "black";
-            ctx.font = "20px Arial";
-            ctx.fillText(`Pontos: ${meusPontos}`, 50, 20);
-        }
-
-        // Loop principal do jogo
-        function atualizaJogo() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            desenhaEstrada();
-            desenhaAtor();
-            desenhaCarros();
-            movimentaCarros();
-            verificaColisao();
-            marcaPonto();
-            exibePontos();
-            requestAnimationFrame(atualizaJogo);
-        }
-
-        // Inicialização do jogo
-        movimentaAtor();
-        imgEstrada.onload = () => atualizaJogo(); // Garantindo que o jogo só começa quando as imagens estão carregadas
-    </script>
+    <script src="../jogo/jogo.js"></script>
 </body>
 </html>

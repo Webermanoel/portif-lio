@@ -9,70 +9,41 @@
     --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-primaria);
+}
+
 .body_banco {
     background-image: url("../banco/assets/fundo-banco.png");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 1em;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 .titulo_principal_banco {
-    text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 2rem;
-    border-radius: 8px;
     color: var(--cor-primaria);
-    border: 3px solid var(--cor-terciaria);
-    padding: 0.5em 1em;
-    margin-bottom: 1em;
     background-color: var(--cor-quintaria);
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    border: 3px solid var(--cor-terciaria);
 }
 
-.entrada_do_deposito,
-.entrada_do_saque,
-.entrada_da_transferencia {
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-    background-color: var(--cor-terciaria);
-    color: var(--cor-secundaria);
-    font-size: 1rem;
-    font-weight: 200;
-    border-radius: 24px;
-    padding: 0.8em;
-    margin: 1em 0;
-    border: none;
-    outline: none;
-}
-
-.botao_depositar,
-.botao_sacar,
-.botao_fazer_transferencia {
-    border-radius: 5px;
-    width: 50%;
-    max-width: 200px;
-    height: 2.5rem;
-    text-align: center;
-    font-size: 1rem;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-primaria);
-    margin: 1em auto;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.botao_depositar:hover,
-.botao_sacar:hover,
-.botao_fazer_transferencia:hover {
-    background-color: var(--cor-terciaria);
-    color: var(--cor-quintaria);
-    transform: scale(1.05);
+.container_imagens2 {
+    margin-top: 1em;
 }
 
 .botao_de_contato {
@@ -86,21 +57,67 @@
     transform: scale(1.2);
 }
 
+main {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario_banco {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.entrada_do_deposito,
+.entrada_do_saque,
+.entrada_da_transferencia {
+    width: 90%;
+    max-width: 400px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 200;
+    border-radius: 24px;
+    padding: 0.8em;
+    border: none;
+    outline: none;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+button {
+    width: 90%;
+    max-width: 300px;
+    padding: 0.8em;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-quintaria);
+    transform: scale(1.05);
+}
+
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .titulo_principal_banco {
         font-size: 1.5rem;
     }
 
-    .entrada_do_deposito,
-    .entrada_do_saque,
-    .entrada_da_transferencia {
-        font-size: 0.9rem;
-    }
-
-    .botao_depositar,
-    .botao_sacar,
-    .botao_fazer_transferencia {
+    input,
+    button {
         font-size: 0.9rem;
     }
 }
@@ -111,17 +128,9 @@
         padding: 0.5em;
     }
 
-    .entrada_do_deposito,
-    .entrada_do_saque,
-    .entrada_da_transferencia {
+    input,
+    button {
         font-size: 0.8rem;
-        padding: 0.5em;
-    }
-
-    .botao_depositar,
-    .botao_sacar,
-    .botao_fazer_transferencia {
-        font-size: 0.8rem;
-        height: 2rem;
+        padding: 0.6em;
     }
 }

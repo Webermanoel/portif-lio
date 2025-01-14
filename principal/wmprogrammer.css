@@ -4,7 +4,6 @@
     --cor-terciaria: darkviolet;
     --cor-quartaria: yellow;
     --cor-quintaria: white;
-
     --fonte-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -19,12 +18,7 @@ body {
     background-position: center;
 }
 
-.texto {
-    background-color: var(--cor-quintaria);
-    color: var(--cor-secundaria);
-}
-
-.titulo_principal {
+.titulo_principal, .texto_introducao {
     font-family: var(--fonte-secundaria);
     text-align: center;
     border-radius: 8px;
@@ -33,18 +27,7 @@ body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     padding: 1em;
-}
-
-.texto_introducao {
-    font-family: var(--fonte-secundaria);
-    font-size: 25px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    border: 3px solid var(--cor-terciaria);
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    text-shadow: 1px 1px var(--cor-terciaria);
+    margin: 0 auto;
 }
 
 .frase_instrucao,
@@ -52,21 +35,35 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 25px;
     font-size: 1.5rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     text-align: center;
-    text-shadow: 1px 1px var(--cor-quartaria);
+    text-shadow: 1px 1px var(--cor-primaria);
 }
 
-.frase_instrucao_02 {
-    font-size: 50px;
-    text-shadow: 1px 1px var(--cor-terciaria);
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
-.container_imagens,
-.container_imagens2 {
+.imagem_programmer {
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.container_imagens, .container_imagens2 {
     position: absolute;
     bottom: 8px;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container_imagens {
@@ -75,16 +72,6 @@ body {
 
 .container_imagens2 {
     left: 16px;
-}
-
-.imagem_instagram,
-.imagem_whatsaap,
-.imagem_github,
-.imagem_linkedin {
-    max-width: 250px;
-    max-height: 200px;
-    width: auto;
-    height: auto;
 }
 
 .botao_de_contato {
@@ -98,110 +85,53 @@ body {
     transform: scale(1.2);
 }
 
-.imagem_programmer,
-.botao_programacao_dois,
-.botao_programacao_tres {
-    position: absolute;
-    max-width: 100%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%);
-    font-size: 5px;
-}
-
-.imagem_programmer {
-    top: 60%;
-    left: 12%;
-}
-
-.botao_programacao_dois {
-    top: 55%;
-    left: 58%;
-}
-
-.botao_programacao_tres {
-    top: 55%;
-    left: 96%;
-}
-
-.botao_voltar {
-    width: 70px;
-    top: 10px;
-}
-
-.introducao_programa {
-    font-family: var(--fonte-secundaria);
-    font-size: 25px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    border: 3px solid var(--cor-terciaria);
-    color: var(--cor-secundaria);
-    text-shadow: 1px 1px var(--cor-terciaria);
-    top: 50px;
-}
-
 /* Responsividade */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+    .titulo_principal, .texto_introducao {
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+
     .container {
-        flex-direction: column-reverse;
-        padding: 5%;
-        width: auto;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .entrada_do_usuario {
-        width: 50%;
+    .imagem_programmer {
+        width: 120px;
+        height: 120px;
     }
 
-    .entrada_do_usuario::placeholder {
-        background-position: 7em;
+    .container_imagens, .container_imagens2 {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
     }
 
-    .container_imagem_programacao {
-        display: none;
-    }
-
-    .botao_salvar,
-    .botao_reiniciar,
-    .botao_mostrar_lista {
-        width: 8%;
-    }
-
-    .botao_salvar::placeholder,
-    .botao_reiniciar::placeholder,
-    .botao_mostrar_lista::placeholder {
-        background-position: 10em;
+    .botao_de_contato {
+        width: 60px;
+        height: 60px;
     }
 }
 
-@media screen and (max-width: 1728px) {
+@media screen and (max-width: 480px) {
+    .titulo_principal, .texto_introducao {
+        font-size: 1rem;
+        padding: 0.4em;
+    }
+
     .container {
-        flex-direction: column-reverse;
         padding: 5%;
-        width: auto;
     }
 
-    .entrada_do_usuario {
-        width: 35%;
+    .imagem_programmer {
+        width: 100px;
+        height: 100px;
     }
 
-    .entrada_do_usuario::placeholder {
-        background-position: 12em;
-    }
-
-    .container_imagem_programacao {
-        display: none;
-    }
-
-    .botao_salvar,
-    .botao_reiniciar,
-    .botao_mostrar_lista {
-        width: 10%;
-    }
-
-    .botao_salvar::placeholder,
-    .botao_reiniciar::placeholder,
-    .botao_mostrar_lista::placeholder {
-        background-position: 10em;
+    .botao_de_contato {
+        width: 50px;
+        height: 50px;
     }
 }
