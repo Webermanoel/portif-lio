@@ -1,0 +1,33 @@
+.icones_contato {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Para garantir que os ícones não saiam da tela */
+}
+
+.imagem_instagram,
+.imagem_whatsaap,
+.imagem_github,
+.imagem_linkedin {
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.container_imagens {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.link_botao_voltar img {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.link_botao_voltar img:hover {
+    transform: scale(1.1);
+}

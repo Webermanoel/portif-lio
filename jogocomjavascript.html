@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Corrida - WMProgrammer</title>
+    <meta name="description" content="Jogue agora e divirta-se com nosso jogo interativo de corrida feito em JavaScript!">
+    <link rel="stylesheet" href="wmprogrammer.css">
+    <link rel="stylesheet" href="jogo.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="body_jogo">
+    <div class="mensagem-orientacao">
+        Por favor, gire seu dispositivo para o modo paisagem para jogar.
+    </div>
+
+    <header class="header">
+        <h1 class="titulo_principal">Bem-vindo ao Jogo</h1>
+    </header>
+
+    <main class="conteudo">
+        <div class="container-voltar">
+            <a class="link-voltar" href="wmprogrammer.html" aria-label="Voltar à página inicial">
+                <img class="botao-voltar" src="assets/icone_programação3.png" alt="Botão para voltar">
+            </a>
+        </div>
+        <canvas id="myCanvas" tabindex="0" width="800" height="400"></canvas>
+    </main>
+
+    <footer class="footer">
+        <p>Pressione <strong>'M'</strong> para ligar/desligar a música de fundo.</p>
+    </footer>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
