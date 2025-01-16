@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 // Garantir foco no canvas
 canvas.focus();
 
-const musicaFundo = new Audio("assets/musica-de-fundo.mp3");
+const musicaFundo = new Audio("musica-de-fundo.mp3");
 musicaFundo.loop = true;
 musicaFundo.volume = 1.0;
 
@@ -48,28 +48,28 @@ window.addEventListener("resize", verificaOrientacao);
 
 // Carregar imagens
 const imgEstrada = new Image();
-imgEstrada.src = "assets/estrada.jpg";
+imgEstrada.src = "estrada.jpg";
 
 const imgAtor = new Image();
-imgAtor.src = "assets/ator-1.jpg";
+imgAtor.src = "ator-1.jpg";
 
 const imgCarro1 = new Image();
-imgCarro1.src = "assets/carro-1.jpg";
+imgCarro1.src = "carro-1.jpg";
 
 const imgCarro2 = new Image();
-imgCarro2.src = "assets/carro-2.jpg";
+imgCarro2.src = "carro-2.jpg";
 
 const imgCarro3 = new Image();
-imgCarro3.src = "assets/carro-3.jpg";
+imgCarro3.src = "carro-3.jpg";
 
 const imgCarro4 = new Image();
-imgCarro4.src = "assets/carro-4.jpg";
+imgCarro4.src = "carro-4.jpg";
 
 const imgCarro5 = new Image();
-imgCarro5.src = "assets/carro-5.jpg";
+imgCarro5.src = "carro-5.jpg";
 
 const imgCarro6 = new Image();
-imgCarro6.src = "assets/carro-6.jpg";
+imgCarro6.src = "carro-6.jpg";
 
 const imagensCarros = [imgCarro1, imgCarro2, imgCarro3, imgCarro4, imgCarro5, imgCarro6];
 

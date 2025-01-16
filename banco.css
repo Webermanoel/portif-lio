@@ -16,7 +16,7 @@ body {
 }
 
 .body_banco {
-    background-image: url("assets/fundo-banco.png");
+    background-image: url("fundo-banco.png");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -44,6 +44,13 @@ header {
 
 .container_imagens2 {
     margin-top: 1em;
+}
+
+.texto{
+    color: var(--cor-primaria);
+    background-color: var(--cor-quintaria);
+    border-radius: 8px;
+    border: 3px solid var(--cor-primaria);
 }
 
 .botao_de_contato {

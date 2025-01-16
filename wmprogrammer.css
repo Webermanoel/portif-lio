@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: url("assets/fundoprograma.js.png");
+    background-image: url("fundoprograma.js.png");
     background-size: cover;
     background-position: center;
 }

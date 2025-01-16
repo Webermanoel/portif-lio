@@ -11,7 +11,7 @@
 
 .body_programa {
     background-color: aquamarine;
-    background-image: url("assets/fundo_página_principal.png");
+    background-image: url("fundo_página_principal.png");
     font-family: var(--fonte-secundaria);
     margin: 0;
     padding: 0;
@@ -30,12 +30,13 @@
 }
 
 .titulo_principal_programa {
+    font-family: var(--fonte-primaria);
     font-size: 2rem;
     padding: 1rem;
     border-radius: 8px;
     border: 3px solid var(--cor-terciaria);
     background-color: var(--cor-terciaria);
-    color: var(--cor-secundaria);
+    color: var(--cor-quintaria);
 }
 
 .entrada_do_usuario {
