@@ -45,33 +45,37 @@ verificaOrientacao();
 // Adiciona evento para detectar mudanças de orientação
 window.addEventListener("resize", verificaOrientacao);
 
-
 // Carregar imagens
 const imgEstrada = new Image();
-imgEstrada.src = "estrada.jpg";
-
 const imgAtor = new Image();
-imgAtor.src = "ator-1.jpg";
+const imagensCarros = [];
+const imagens = [
+    { src: "estrada.jpg", img: imgEstrada },
+    { src: "ator-1.jpg", img: imgAtor },
+    { src: "carro-1.jpg", img: new Image() },
+    { src: "carro-2.jpg", img: new Image() },
+    { src: "carro-3.jpg", img: new Image() },
+    { src: "carro-4.jpg", img: new Image() },
+    { src: "carro-5.jpg", img: new Image() },
+    { src: "carro-6.jpg", img: new Image() }
+];
 
-const imgCarro1 = new Image();
-imgCarro1.src = "carro-1.jpg";
-
-const imgCarro2 = new Image();
-imgCarro2.src = "carro-2.jpg";
-
-const imgCarro3 = new Image();
-imgCarro3.src = "carro-3.jpg";
-
-const imgCarro4 = new Image();
-imgCarro4.src = "carro-4.jpg";
-
-const imgCarro5 = new Image();
-imgCarro5.src = "carro-5.jpg";
-
-const imgCarro6 = new Image();
-imgCarro6.src = "carro-6.jpg";
-
-const imagensCarros = [imgCarro1, imgCarro2, imgCarro3, imgCarro4, imgCarro5, imgCarro6];
+// Função para carregar as imagens
+function carregarImagens() {
+    return new Promise((resolve, reject) => {
+        let imagesLoaded = 0;
+        imagens.forEach(({ src, img }) => {
+            img.src = src;
+            img.onload = () => {
+                imagesLoaded++;
+                if (imagesLoaded === imagens.length) {
+                    resolve();
+                }
+            };
+            img.onerror = reject;
+        });
+    });
+}
 
 // Variáveis do Ator
 let xAtor = 85;
@@ -103,7 +107,7 @@ function desenhaAtor() {
 // Desenhar os carros
 function desenhaCarros() {
     for (let i = 0; i < xCarros.length; i++) {
-        ctx.drawImage(imagensCarros[i % imagensCarros.length], xCarros[i], yCarros[i], larguraCarro, alturaCarro);
+        ctx.drawImage(imagens[i + 2].img, xCarros[i], yCarros[i], larguraCarro, alturaCarro);
     }
 }
 
@@ -148,44 +152,43 @@ function verificaColisao() {
             yAtor + alturaAtor > yCarros[i]
         ) {
             voltaAtorParaPosicaoInicial();
-            if (meusPontos > 0) meusPontos -= 1;
+            if (meusPontos > 0) meusPontos--;
         }
     }
 }
 
-// Reposicionar o ator
+// Voltar o ator à posição inicial após colisão
 function voltaAtorParaPosicaoInicial() {
+    xAtor = 85;
     yAtor = 366;
 }
 
-// Marcar ponto
-function marcaPonto() {
-    if (yAtor < 15) {
-        meusPontos += 1;
-        voltaAtorParaPosicaoInicial();
+// Atualizar a pontuação
+function atualizaPontos() {
+    if (yAtor <= 0) {  // O ator atravessou a estrada (você pode ajustar a condição)
+        meusPontos++;
+        yAtor = 366; // Reseta o ator para a posição inicial
     }
-}
-
-// Exibir os pontos
-function exibePontos() {
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.font = "20px Arial";
-    ctx.fillText(`Pontos: ${meusPontos}`, 50, 20);
+    ctx.fillText("Pontos: " + meusPontos, 10, 20);
 }
 
-// Atualizar o jogo
+// Atualizar o jogo a cada quadro
 function atualizaJogo() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
     desenhaEstrada();
     desenhaAtor();
     desenhaCarros();
     movimentaAtor();
     movimentaCarros();
     verificaColisao();
-    marcaPonto();
-    exibePontos();
+    atualizaPontos();
     requestAnimationFrame(atualizaJogo);
 }
 
-// Iniciar o jogo quando a imagem da estrada carregar
-imgEstrada.onload = () => atualizaJogo();
+// Iniciar o jogo após o carregamento das imagens
+carregarImagens().then(() => {
+    atualizaJogo();
+}).catch((err) => {
+    console.error("Erro ao carregar as imagens:", err);
+});

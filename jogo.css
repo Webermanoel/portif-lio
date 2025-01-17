@@ -93,6 +93,26 @@ elemento {
     z-index: 10; /* Aumente o valor para garantir que o elemento fique visível acima de outros */
 }
 
+.controle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#controle_esquerda {
+    left: 20px;
+    bottom: 50px;
+}
+
+#controle_direita {
+    right: 20px;
+    bottom: 50px;
+}
+
+
 
 /* Responsividade */
 @media screen and (max-width: 768px) {

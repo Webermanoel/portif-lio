@@ -53,6 +53,13 @@
     padding: 1em;
 }
 
+.texto{
+    color: var(--cor-primaria);
+    background-color: var(--cor-quintaria);
+    border-radius: 8px;
+    border: 3px solid var(--cor-primaria);
+}
+
 .lista_botoes {
     margin-top: 30px;
 }
