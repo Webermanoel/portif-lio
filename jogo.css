@@ -24,19 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-.header {
-    text-align: center;
-    background-color: var(--cor-primaria);
-    padding: 20px;
-    border-bottom: 3px solid var(--cor-terciaria);
-}
-
-.titulo_principal {
-    font-size: 2.8rem;
-    color: var(--cor-quintaria);
-    text-shadow: 2px 2px var(--cor-terciaria);
-}
-
 .container-voltar {
     text-align: center;
     margin: 20px 0;
