@@ -39,7 +39,7 @@ header {
     background-color: var(--cor-quintaria);
     padding: 0.5em 1em;
     border-radius: 8px;
-    border: 3px solid var(--cor-terciaria);
+    border: 3px solid var(--cor-primaria);
 }
 
 .container_imagens2 {
@@ -85,7 +85,7 @@ main {
 .entrada_da_transferencia {
     width: 90%;
     max-width: 400px;
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
     font-size: 1rem;
     font-weight: 200;
@@ -112,7 +112,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-quintaria);
     transform: scale(1.05);
 }
