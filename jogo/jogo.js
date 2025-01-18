@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 // Garantir foco no canvas
 canvas.focus();
 
-const musicaFundo = new Audio("musica-de-fundo.mp3");
+const musicaFundo = new Audio("../images/musica-de-fundo.mp3");
 musicaFundo.loop = true;
 musicaFundo.volume = 1.0;
 
@@ -50,14 +50,14 @@ const imgEstrada = new Image();
 const imgAtor = new Image();
 const imagensCarros = [];
 const imagens = [
-    { src: "estrada.jpg", img: imgEstrada },
-    { src: "ator-1.jpg", img: imgAtor },
-    { src: "carro-1.jpg", img: new Image() },
-    { src: "carro-2.jpg", img: new Image() },
-    { src: "carro-3.jpg", img: new Image() },
-    { src: "carro-4.jpg", img: new Image() },
-    { src: "carro-5.jpg", img: new Image() },
-    { src: "carro-6.jpg", img: new Image() }
+    { src: "../images/estrada.jpg", img: imgEstrada },
+    { src: "../images/ator-1.jpg", img: imgAtor },
+    { src: "../images/carro-1.jpg", img: new Image() },
+    { src: "../images/carro-2.jpg", img: new Image() },
+    { src: "../images/carro-3.jpg", img: new Image() },
+    { src: "../images/carro-4.jpg", img: new Image() },
+    { src: "../images/carro-5.jpg", img: new Image() },
+    { src: "../images/carro-6.jpg", img: new Image() }
 ];
 
 // Função para carregar as imagens

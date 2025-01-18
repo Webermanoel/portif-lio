@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: url('fundo portifólio.png');
+    background-image: url('images/fundo\ portifólio.png');
     background-color: var(--cor-quintaria);
     color: var(--cor-terciaria);
     font-family: var(--fonte-primaria);

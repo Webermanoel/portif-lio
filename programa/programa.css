@@ -11,7 +11,7 @@
 
 .body_programa {
     background-color: aquamarine;
-    background-image: url(fundo_programa.webp);
+    background-image: url(../images/fundoprograma.js.png);
     font-family: var(--fonte-secundaria);
     margin: 0;
     padding: 0;

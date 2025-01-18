@@ -16,7 +16,7 @@ body {
 }
 
 .body_banco {
-    background-image: url("fundo-banco.png");
+    background-image: url("../images/fundo-banco.png");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
