@@ -28,6 +28,20 @@ function exibeControlesAudio() {
     ctx.fillText("Pressione 'M' para ligar/desligar a música", 500, 20);
 }
 
+const botaoMusica = document.getElementById('botaoMusica');
+const musica = document.getElementById('musicaDeFundo');
+
+botaoMusica.addEventListener('click', () => {
+    if (musica.paused) {
+        musica.play();
+        botaoMusica.textContent = '🔇'; // Ícone de desligar
+    } else {
+        musica.pause();
+        botaoMusica.textContent = '🔊'; // Ícone de ligar
+    }
+});
+
+
 const mensagemOrientacao = document.querySelector('.mensagem-orientacao');
 
 // Função para verificar a orientação e mostrar/esconder a mensagem
@@ -82,6 +96,39 @@ let xAtor = 85;
 let yAtor = 366;
 const larguraAtor = 40;
 const alturaAtor = 40;
+
+const personagem = document.getElementById('personagem');
+const velocidade = 10; // Pixels por movimento
+
+document.getElementById('cima').addEventListener('click', () => {
+    personagem.style.top = `${personagem.offsetTop - velocidade}px`;
+});
+
+document.getElementById('baixo').addEventListener('click', () => {
+    personagem.style.top = `${personagem.offsetTop + velocidade}px`;
+});
+
+document.getElementById('esquerda').addEventListener('click', () => {
+    personagem.style.left = `${personagem.offsetLeft - velocidade}px`;
+});
+
+document.getElementById('direita').addEventListener('click', () => {
+    personagem.style.left = `${personagem.offsetLeft + velocidade}px`;
+});
+
+
+function moverPersonagem(event) {
+    const x = event.touches ? event.touches[0].clientX : event.clientX;
+    const y = event.touches ? event.touches[0].clientY : event.clientY;
+
+    personagem.style.left = `${x}px`;
+    personagem.style.top = `${y}px`;
+}
+
+
+// Adiciona os eventos de clique e toque
+document.addEventListener('click', moverPersonagem);
+document.addEventListener('touchstart', moverPersonagem);
 
 // Variáveis dos carros
 let xCarros = [700, 600, 500, 800, 900, 1000];

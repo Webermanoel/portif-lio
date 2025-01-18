@@ -42,6 +42,21 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+#controle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#controle div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .botao-voltar:hover {
     transform: scale(1.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
