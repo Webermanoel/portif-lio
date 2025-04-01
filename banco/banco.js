@@ -16,34 +16,6 @@ function exibirTextoNaTela(tag, texto, classe = '') {
     }, 5000);
 }
 
-function realizarCadastro() {
-    let email = prompt("Cadastre um email pessoal no formato válido:");
-    emailCadastrado.push(email);
-    alert('Email cadastrado com sucesso');
-
-    let senha = prompt("Cadastre uma senha com até 8 caracteres no formato válido:");
-    senhaCadastrado.push(senha);
-    alert('Senha cadastrada com sucesso');
-}
-
-function fazerLogin() {
-    alert('Para acessar a conta, favor fazer login com email e senha cadastrados!');
-    let emailLogin = prompt('Digite seu email:');
-    if (!emailCadastrado.includes(emailLogin)) {
-        alert('Email incorreto! Digite o email cadastrado');
-        return false;
-    }
-
-    let senhaLogin = prompt('Digite sua senha:');
-    if (!senhaCadastrado.includes(senhaLogin)) {
-        alert('Senha incorreta! Digite a senha cadastrada');
-        return false;
-    }
-
-    alert('Login efetuado com sucesso!');
-    return true;
-}
-
 function depositar() {
     const deposito = parseFloat(document.querySelector('.entrada_do_deposito').value);
     if (isNaN(deposito) || deposito <= 0) {

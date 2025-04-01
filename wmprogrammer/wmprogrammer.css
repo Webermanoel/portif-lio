@@ -4,16 +4,16 @@
     --cor-terciaria: darkviolet;
     --cor-quartaria: yellow;
     --cor-quintaria: white;
+    --cor-sextaria: gray;
     --fonte-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background-color: var(--cor-quintaria);
+    background-color: var(--cor-primaria);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-image: url(../images/fundoprograma.js.png);
     background-size: cover;
     background-position: center;
 }

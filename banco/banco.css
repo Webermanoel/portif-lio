@@ -4,6 +4,7 @@
     --cor-terciaria: darkviolet;
     --cor-quartaria: yellow;
     --cor-quintaria: white;
+    --cor-sextaria: gray;
 
     --fonte-primaria: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --fonte-secundaria: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -16,7 +17,7 @@ body {
 }
 
 .body_banco {
-    background-image: url("../images/fundo-banco.png");
+    background-color: var(--cor-sextaria);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
