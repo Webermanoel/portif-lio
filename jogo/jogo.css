@@ -86,13 +86,13 @@ body {
 }
 
 elemento {
-    display: block; /* ou inline-block, dependendo do caso */
+    display: block; 
     visibility: visible;
 }
 
 .elemento {
     position: relative;
-    z-index: 10; /* Aumente o valor para garantir que o elemento fique visível acima de outros */
+    z-index: 10; 
 }
 
 .controle {
@@ -115,8 +115,6 @@ elemento {
 }
 
 
-
-/* Responsividade */
 @media screen and (max-width: 768px) {
     .titulo_principal {
         font-size: 2rem;
@@ -133,20 +131,20 @@ elemento {
     }
 
     canvas {
-        width: 100%; /* Ajusta o tamanho do canvas ao tamanho da tela */
+        width: 100%; 
         height: auto;
     }
     .botao {
-        font-size: 1rem; /* Ajusta o tamanho dos botões e textos */
+        font-size: 1rem; 
     }
 
     .mensagem-orientacao {
-        display: none; /* Inicialmente escondido em telas maiores */
+        display: none; 
     }
 
     @media (orientation: portrait) {
         .mensagem-orientacao {
-            display: block; /* Mostra a mensagem apenas em modo retrato */
+            display: block; 
         }
     }
 }

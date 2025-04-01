@@ -118,7 +118,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Responsividade */
 @media screen and (max-width: 768px) {
     .titulo_principal_banco {
         font-size: 1.5rem;
