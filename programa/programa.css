@@ -91,7 +91,7 @@
     transform: scale(1.2);
 }
 
-/* Responsividade */
+
 @media screen and (max-width: 1024px) {
     .entrada_do_usuario {
         max-width: 80%;

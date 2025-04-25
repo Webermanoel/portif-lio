@@ -130,20 +130,20 @@ body {
 
     .apresentacao {
         padding: 1rem;
-        gap: 1rem; /* Reduz o espaço entre os elementos */
+        gap: 1rem; 
     }
     .apresentacao__links {
-        gap: 1rem; /* Ajusta o espaçamento entre os links */
+        gap: 1rem; 
     }
     .apresentacao__conteudo {
-        gap: 1.5rem; /* Reduz o espaço entre texto e outros conteúdos */
+        gap: 1.5rem; 
     }
 
     .apresentacao__conteudo__titulo {
-        font-size: 2rem; /* Reduz o tamanho do título */
+        font-size: 2rem; 
     }
     .apresentacao__conteudo__texto {
-        font-size: 1.2rem; /* Diminui o texto */
+        font-size: 1.2rem; 
     }
 
     .apresentacao__conteudo__texto {
@@ -151,7 +151,7 @@ body {
     }
 
     .apresentacao__links__navegacao {
-        padding: 0.5rem; /* Reduz o padding interno dos links */
-        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 0.5rem; 
+        font-size: 0.9rem; 
     }
 }
