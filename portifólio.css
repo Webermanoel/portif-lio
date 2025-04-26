@@ -6,7 +6,10 @@
     --cor-terciaria: white;
     --cor-quartaria: yellow;
     --cor-hover: darkviolet;
-    --cor-quintaria: gray;
+    --cor-java: orangered;
+    --cor-php: dodgerblue;
+    --cor-python-um: cornflowerblue;
+
     --fonte-primaria: 'Montserrat', sans-serif;
     --fonte-secundaria: 'Poppins', sans-serif;
 }
@@ -18,11 +21,40 @@
 }
 
 body {
-    background-image: url('images/fundo\ portifólio.png');
-    background-color: var(--cor-quintaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     font-family: var(--fonte-primaria);
     line-height: 1.6;
+    
+}
+
+.java_decoracao{
+    border-radius: 8px;
+    border: 2 px solid;
+    background-color: var(--cor-java);
+}
+
+.python_decoracao{
+    color: var(--cor-python-um);
+}
+
+.python_decoracao_dois{
+    color: var(--cor-quartaria);
+}
+
+.php_decoracao{
+    color: var(--cor-php);
+}
+
+.csharp_decoracao{
+    color: var(--cor-hover);
+}
+
+.js_decoracao{
+    border-radius: 8px;
+    border: 2 px solid;
+    background-color: var(--cor-quartaria);
+    color: var(--cor-primaria);
 }
 
 .apresentacao {
@@ -48,29 +80,23 @@ body {
     height: auto;
 }
 
-.apresentacao__conteudo__titulo {
-    font-size: 2.5rem;
+.apresentacao__conteudo__titulo{
+    font-size: 2.0rem;
     font-family: var(--fonte-primaria);
-    border: 3px solid var(--cor-primaria);
-    background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     text-align: center;
 }
-
-.apresentacao__conteudo__texto {
+   
+.apresentacao__conteudo__texto{
     font-size: 1.5rem;
-    font-family: var(--fonte-secundaria);
-    border: 3px solid var(--cor-primaria);
-    background-color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
     color: var(--cor-terciaria);
-    text-align: justify;
+    text-align: center;
 }
 
 .apresentacao__links {
     display: flex;
     flex-direction: column;
-    border: 3px solid var(--cor-primaria);
-    background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
     gap: 1.5rem;
     text-align: center;
@@ -78,9 +104,11 @@ body {
 
 .apresentacao__links__navegacao {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
     border-radius: 8px;
+    border: 2px solid var(--cor-secundaria);
     padding: 1rem;
     text-decoration: none;
     font-size: 1.25rem;
@@ -91,7 +119,7 @@ body {
 }
 
 .apresentacao__links__navegacao:hover {
-    background-color: var(--cor-hover);
+    background-color: var(--cor-secundaria);
     transform: translateY(-3px);
 }
 

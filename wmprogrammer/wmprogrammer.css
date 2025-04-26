@@ -18,13 +18,19 @@ body {
     background-position: center;
 }
 
-.titulo_principal, .texto_introducao {
+.titulo_principal{
     font-family: var(--fonte-primaria);
     text-align: center;
-    border-radius: 8px;
+    font-size: 2.5rem;
+    color: var(--cor-quintaria);
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.texto_introducao{
+    font-family: var(--fonte-primaria);
+    text-align: center;
     font-size: 1.5rem;
-    border: 3px solid var(--cor-secundaria);
-    background-color: var(--cor-primaria);
     color: var(--cor-quintaria);
     padding: 1em;
     margin: 0 auto;
