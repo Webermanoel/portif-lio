@@ -25,7 +25,9 @@ body {
     color: var(--cor-terciaria);
     font-family: var(--fonte-primaria);
     line-height: 1.6;
-    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .java_decoracao{
