@@ -28,7 +28,6 @@ body {
 }
 
 .texto_introducao{
-    top: 50%;
     font-family: var(--fonte-primaria);
     text-align: center;
     font-size: 1.5rem;
@@ -161,6 +160,19 @@ body {
     .botao_de_contato {
         width: 60px;
         height: 60px;
+    }
+
+    .apresentacao__links__navegacao {
+        font-size: 1rem;
+    }
+    .apresentacao__links__imagem {
+        width: 30px;
+        height: 30px;
+    }
+
+    .apresentacao__links__navegacao {
+        padding: 0.5rem; 
+        font-size: 0.9rem; 
     }
 }
 
