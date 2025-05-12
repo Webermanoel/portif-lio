@@ -49,6 +49,23 @@ body {
     text-align: center;
 }
 
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.0rem;
+    border-radius: 8px;
+    border: 2px solid var(--cor-secundaria);
+    font-weight: 600;
+    color: var(--cor-quintaria);
+    text-decoration: none;
+}
+
 .apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
@@ -133,12 +150,18 @@ body {
     transform: scale(1.2);
 }
 
-/* Responsividade */
 @media screen and (max-width: 768px) {
     .titulo_principal, .texto_introducao {
         font-size: 1.2rem;
         padding: 0.5em;
     }
+
+    .cabecalho{
+        padding: 10%;  
+   }
+   .cabecalho__menu{
+       justify-content: center;
+   }
 
     .container {
         flex-direction: column;
